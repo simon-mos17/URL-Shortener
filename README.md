@@ -20,7 +20,7 @@ The application allows users to create short links from long URLs and redirect t
 * **Java**
 * **Spring Boot**
 * **Spring Data JPA**
-* **MySQL / H2**
+* **MySQL**
 * **Maven**
 
 ---
