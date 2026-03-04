@@ -12,11 +12,11 @@ public class ShortLink {
     private String originalLink;
 
     @Column(unique = true)
-    private String shortLink;
+    private String shortedLink;
 
-    public ShortLink(String originalLink, String shortLink){
+    public ShortLink(String originalLink, String shortedLink){
         this.originalLink = originalLink;
-        this.shortLink = shortLink;
+        this.shortedLink = shortedLink;
     }
 
     public ShortLink(){}
@@ -33,11 +33,11 @@ public class ShortLink {
         this.originalLink = originalLink;
     }
 
-    public String getShortLink() {
-        return shortLink;
+    public String getShortedLink() {
+        return shortedLink;
     }
 
-    public void setShortLink(String shortLink) {
-        this.shortLink = shortLink;
+    public void setShortedLink(String shortedLink) {
+        this.shortedLink = shortedLink;
     }
 }
