@@ -133,11 +133,3 @@ http://localhost:8080/links/{shortedLink}
 ```
 
 ---
-
-## Future Improvements
-
-* Click statistics
-* Custom short links
-* Expiration dates
-* Frontend UI
-* Authentication
