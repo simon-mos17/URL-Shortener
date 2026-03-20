@@ -2,6 +2,7 @@ package org.example.shortener;
 
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Service
@@ -29,7 +30,11 @@ public class ShortLinkService {
         Optional<ShortLink> optional = repo.findByShortedLink(shortedLink);
 
         if (optional.isPresent()) {
-            return optional.get().getOriginalLink();
+            ShortLink link = optional.get();
+            link.setClickCount(link.getClickCount() + 1);
+            link.setLastClickTime(LocalDateTime.now());
+            repo.save(link);
+            return link.getOriginalLink();
         }
         return null;
     }

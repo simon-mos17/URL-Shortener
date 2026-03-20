@@ -22,7 +22,11 @@ public class ShortLinkController {
     public RedirectView redirect(@PathVariable String shortedLink){
         String originalLink = service.getOriginalLink(shortedLink);
 
-        return new RedirectView(originalLink);
+        if(originalLink == null){
+            return new RedirectView("/not-found");
+        } else {
+            return new RedirectView(originalLink);
+        }
     }
 
 }
